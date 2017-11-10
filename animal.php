@@ -24,7 +24,7 @@ if (false === $result)
   $result = $rand_animal;
 $result = $result . (0 === $count ? '' : $count);
 $animals[$result]++;
-file_put_contents('./animal/animals.json', json_encode($animals));
+file_put_contents('./animals.json', json_encode($animals));
 $count = $animals[$result];
 setcookie($key, $result, time() + (3600 * 24 * 30) , "/");
 
